@@ -1,3 +1,5 @@
+// simple test with ReactDOM
+// http://localhost:3000/counter
 import { act } from 'react'
 import { createRoot } from 'react-dom/client'
 import { expect, test } from 'vitest'

@@ -1,3 +1,5 @@
+// simple test with React Testing Library
+// http://localhost:3000/counter
 import { expect, test } from 'vitest'
 import Counter from '@/components/Counter'
 import { fireEvent, render } from '@testing-library/react'
