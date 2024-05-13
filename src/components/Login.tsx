@@ -8,11 +8,16 @@ import { FormEvent } from 'react'
 function Login({ onSubmit }: { onSubmit: (data: UserAuth) => void }) {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const { username, password } = event.currentTarget
+    // const { username, password } = event.currentTarget
+    const { username, password } = Object.fromEntries(
+      new FormData(event.currentTarget).entries(),
+    )
 
     onSubmit({
-      username: username.value,
-      password: password.value,
+      // username: username.value,
+      // password: password.value,
+      username: username.toString(),
+      password: password.toString(),
     })
   }
   return (
