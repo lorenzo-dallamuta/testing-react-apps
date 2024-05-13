@@ -1,6 +1,7 @@
 // Avoid implementation details
 // http://localhost:3000/counter
 import * as React from 'react'
+import { expect, test } from 'vitest'
 import Counter from '@/components/Counter'
 // 🐨 add `screen` to the import here:
 import { render, screen } from '@testing-library/react'
