@@ -1,3 +1,7 @@
+import React, { PropsWithChildren } from 'react'
+import { ThemeProvider } from '@/contexts/theme'
+import { RenderOptions, render as rtlRender } from '@testing-library/react'
+
 // 💰 I'm going to give you this handy utility function
 // it allows you to create a promise that you can resolve/reject on demand.
 export function deferred() {
@@ -16,3 +20,16 @@ export function deferred() {
 // resolve()
 // await promise
 // // assert on the resolved state
+
+export function render(
+  ui: React.ReactNode,
+  {
+    theme = 'light',
+    ...options
+  }: Omit<RenderOptions, 'queries'> & { theme?: 'light' | 'dark' } = {},
+) {
+  const Wrapper = ({ children }: PropsWithChildren) => (
+    <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
+  )
+  return rtlRender(ui, { wrapper: Wrapper, ...options })
+}
