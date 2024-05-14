@@ -2,8 +2,8 @@
 // 💯 setup function
 // http://localhost:3000/counter-hook
 import { expect, test } from 'vitest'
-import useCounter from '@/hooks/use-counter'
 import { act, render } from '@testing-library/react'
+import useCounter from '@/hooks/use-counter'
 
 type Props = {
   initialProps?: { initialCount?: number; step?: number }

@@ -3,11 +3,11 @@
 import * as React from 'react'
 import { vi } from 'vitest'
 import { expect, test } from 'vitest'
-import Login from '@/components/Login'
 import { faker } from '@faker-js/faker'
 import { build } from '@jackfranklin/test-data-bot'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Login from '@/components/Login'
 
 test('submitting the form calls onSubmit with username and password', async () => {
   // 🐨 create a variable called "submittedData" and a handleSubmit function that

@@ -2,8 +2,8 @@
 // 💯 use @testing-library/jest-dom
 // http://localhost:3000/counter
 import { expect, test } from 'vitest'
-import Counter from '@/components/Counter'
 import { fireEvent, render } from '@testing-library/react'
+import Counter from '@/components/Counter'
 
 test('counter increments and decrements when the buttons are clicked', () => {
   const { container } = render(<Counter />)

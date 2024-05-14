@@ -2,9 +2,9 @@
 // 💯 swap @testing-library/react with app test utils
 // http://localhost:3000/easy-button
 import { expect, test } from 'vitest'
+import { screen } from '@testing-library/react'
 import EasyButton from '@/components/EasyButton'
 import { render } from '@/tests/utils'
-import { screen } from '@testing-library/react'
 
 test('renders with the light styles for the light theme', () => {
   render(<EasyButton>Easy</EasyButton>, { theme: 'light' })

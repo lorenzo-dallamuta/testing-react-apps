@@ -2,9 +2,9 @@
 // http://localhost:3000/easy-button
 import { PropsWithChildren } from 'react'
 import { expect, test } from 'vitest'
+import { render, screen } from '@testing-library/react'
 import EasyButton from '@/components/EasyButton'
 import { ThemeProvider } from '@/contexts/theme'
-import { render, screen } from '@testing-library/react'
 
 test('renders with the light styles for the light theme', () => {
   const Wrapper = ({ children }: PropsWithChildren) => (

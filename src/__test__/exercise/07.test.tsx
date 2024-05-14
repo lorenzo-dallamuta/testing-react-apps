@@ -2,14 +2,14 @@
 // http://localhost:3000/easy-button
 import * as React from 'react'
 import { expect, test } from 'vitest'
-import EasyButton from '@/components/EasyButton'
-// import { ThemeProvider } from '@/contexts/theme'
-import { render } from '@/tests/utils'
 import {
   //   RenderOptions,
   //   render as rtlRender,
   screen,
 } from '@testing-library/react'
+import EasyButton from '@/components/EasyButton'
+// import { ThemeProvider } from '@/contexts/theme'
+import { render } from '@/tests/utils'
 
 // function render(
 //   ui: React.ReactNode,

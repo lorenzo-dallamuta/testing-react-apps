@@ -2,8 +2,8 @@
 // 💯 using react-hooks testing library
 // http://localhost:3000/counter-hook
 import { expect, test } from 'vitest'
-import useCounter from '@/hooks/use-counter'
 import { act, renderHook } from '@testing-library/react'
+import useCounter from '@/hooks/use-counter'
 
 test('exposes the count and increment/decrement functions', () => {
   const { result } = renderHook(useCounter)

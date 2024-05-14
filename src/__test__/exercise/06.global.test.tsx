@@ -2,11 +2,11 @@
 // http://localhost:3000/location
 import * as React from 'react'
 import { expect, test, vi } from 'vitest'
-import Location from '@/app/location/page'
-import { deferred } from '@/tests/utils'
 import { faker } from '@faker-js/faker'
 import { build } from '@jackfranklin/test-data-bot'
 import { act, render, screen } from '@testing-library/react'
+import Location from '@/app/location/page'
+import { deferred } from '@/tests/utils'
 
 // 🐨 set window.navigator.geolocation to an object that has a getCurrentPosition mock function
 const getCurrentPosition = vi.fn()

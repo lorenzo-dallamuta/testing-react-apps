@@ -1,9 +1,8 @@
 // Avoid implementation details
 // http://localhost:3000/counter
-import * as React from 'react'
 import { expect, test } from 'vitest'
-import Counter from '@/components/Counter'
 import { fireEvent, render, screen } from '@testing-library/react'
+import Counter from '@/components/Counter'
 
 test('counter increments and decrements when the buttons are clicked', () => {
   render(<Counter />)

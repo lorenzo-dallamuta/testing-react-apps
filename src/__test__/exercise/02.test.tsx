@@ -1,8 +1,8 @@
 // simple test with React Testing Library
 // http://localhost:3000/counter
 import { expect, test } from 'vitest'
-import Counter from '@/components/Counter'
 import { fireEvent, render } from '@testing-library/react'
+import Counter from '@/components/Counter'
 
 // 💣 so you can now delete this!
 // global.IS_REACT_ACT_ENVIRONMENT = true

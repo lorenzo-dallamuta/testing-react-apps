@@ -2,9 +2,9 @@
 // 💯 use a jest mock function
 // http://localhost:3000/login
 import { expect, test, vi } from 'vitest'
-import Login from '@/components/Login'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Login from '@/components/Login'
 
 test('submitting the form calls onSubmit with username and password', async () => {
   const handleSubmit = vi.fn()

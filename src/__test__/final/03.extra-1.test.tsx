@@ -2,9 +2,9 @@
 // 💯 use userEvent
 // http://localhost:3000/counter
 import { expect, test } from 'vitest'
-import Counter from '@/components/Counter'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Counter from '@/components/Counter'
 
 test('counter increments and decrements when the buttons are clicked', async () => {
   render(<Counter />)

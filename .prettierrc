@@ -12,7 +12,7 @@
   "jsxBracketSameLine": false,
   "arrowParens": "avoid",
 
-  "importOrder": ["^[a-zA-Z](.*)$", "^@(.*)/(.*)$", "[./]"],
+  "importOrder": ["^[a-zA-Z](.*)$", "^@([^/]+)/(.*)$", "^@/(.*)$", "[./]"],
   "importOrderSeparation": false,
   "importOrderSortSpecifiers": true
 }

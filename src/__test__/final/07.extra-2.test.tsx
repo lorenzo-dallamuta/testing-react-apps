@@ -1,11 +1,10 @@
 // testing with context and a custom render method
 // 💯 create a custom render method
 // http://localhost:3000/easy-button
-import * as React from 'react'
 import { expect, test } from 'vitest'
+import { RenderOptions, render, screen } from '@testing-library/react'
 import EasyButton from '@/components/EasyButton'
 import { ThemeProvider } from '@/contexts/theme'
-import { RenderOptions, render, screen } from '@testing-library/react'
 
 function renderWithProviders(
   ui: React.ReactNode,

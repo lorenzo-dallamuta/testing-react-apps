@@ -3,8 +3,6 @@
 // http://localhost:3000/login-submission
 import { setupServer } from 'msw/node'
 import { afterAll, beforeAll, expect, test } from 'vitest'
-import Login from '@/components/LoginSubmission'
-import { handlers } from '@/tests/server-handlers'
 import { faker } from '@faker-js/faker'
 import { build } from '@jackfranklin/test-data-bot'
 import {
@@ -13,6 +11,8 @@ import {
   waitForElementToBeRemoved,
 } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Login from '@/components/LoginSubmission'
+import { handlers } from '@/tests/server-handlers'
 
 const buildLoginForm = build({
   fields: {

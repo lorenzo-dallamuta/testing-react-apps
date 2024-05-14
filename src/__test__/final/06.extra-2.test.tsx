@@ -2,8 +2,8 @@
 // 💯 test the unhappy path
 // http://localhost:3000/location
 import { beforeAll, expect, test, vi } from 'vitest'
-import Location from '@/app/location/page'
 import { act, render, screen } from '@testing-library/react'
+import Location from '@/app/location/page'
 
 const getCurrentPosition = vi.fn()
 beforeAll(() => {

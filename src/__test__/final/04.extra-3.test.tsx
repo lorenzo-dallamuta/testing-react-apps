@@ -2,10 +2,10 @@
 // 💯 allow for overrides
 // http://localhost:3000/login
 import { expect, test, vi } from 'vitest'
-import Login from '@/components/Login'
 import { faker } from '@faker-js/faker'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Login from '@/components/Login'
 
 function buildLoginForm(overrides?: any) {
   return {

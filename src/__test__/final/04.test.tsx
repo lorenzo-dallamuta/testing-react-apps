@@ -1,9 +1,9 @@
 // form testing
 // http://localhost:3000/login
 import { expect, test } from 'vitest'
-import Login from '@/components/Login'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Login from '@/components/Login'
 
 test('submitting the form calls onSubmit with username and password', async () => {
   let submittedData

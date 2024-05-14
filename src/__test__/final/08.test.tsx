@@ -1,9 +1,9 @@
 // testing custom hooks
 // http://localhost:3000/counter-hook
 import { expect, test } from 'vitest'
-import useCounter from '@/hooks/use-counter'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import useCounter from '@/hooks/use-counter'
 
 function UseCounterHookExample() {
   const { count, increment, decrement } = useCounter()

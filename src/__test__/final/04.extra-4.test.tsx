@@ -2,11 +2,11 @@
 // 💯 use Test Data Bot
 // http://localhost:3000/login
 import { expect, test, vi } from 'vitest'
-import Login from '@/components/Login'
 import { faker } from '@faker-js/faker'
 import { build } from '@jackfranklin/test-data-bot'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import Login from '@/components/Login'
 
 const buildLoginForm = build({
   fields: {

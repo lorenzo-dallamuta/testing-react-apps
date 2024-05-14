@@ -1,9 +1,9 @@
 // testing custom hooks
 // http://localhost:3000/counter-hook
 import { expect, test } from 'vitest'
-import useCounter from '@/hooks/use-counter'
 import { act, render, renderHook, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import useCounter from '@/hooks/use-counter'
 
 // 🐨 create a simple function component that uses the useCounter hook
 // and then exposes some UI that our test can interact with to test the

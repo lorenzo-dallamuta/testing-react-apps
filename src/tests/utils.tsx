@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react'
-import { ThemeProvider } from '@/contexts/theme'
 import { RenderOptions, render as rtlRender } from '@testing-library/react'
+import { ThemeProvider } from '@/contexts/theme'
 
 // 💰 I'm going to give you this handy utility function
 // it allows you to create a promise that you can resolve/reject on demand.
