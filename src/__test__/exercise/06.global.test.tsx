@@ -45,7 +45,7 @@ test('displays the users current location', async () => {
   // screen.debug()
   expect(screen.getByLabelText(/loading/i)).toBeInTheDocument()
   // 🐨 resolve the deferred promise
-  await act(async () => resolve(true))
+  await act(async () => resolve())
   // 🐨 wait for the promise to resolve
   await promise
   // 💰 right around here, you'll probably notice you get an error log in the

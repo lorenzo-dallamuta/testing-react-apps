@@ -6,15 +6,15 @@ const handlers = [
   http.post<PathParams, { username: string; password: string }>(
     'https://auth-provider.example.com/api/login',
     async ({ request }) => {
-      const info = await request.json()
-      if (!info.password) {
+      const payload = await request.json()
+      if (!payload.password) {
         await delay(delayAmount)
         return HttpResponse.json(
           { message: 'password required' },
           { status: 400 },
         )
       }
-      if (!info.username) {
+      if (!payload.username) {
         await delay(delayAmount)
         return HttpResponse.json(
           { message: 'username required' },
@@ -23,7 +23,7 @@ const handlers = [
       }
       await delay(delayAmount)
       return HttpResponse.json({
-        username: info.username,
+        username: payload.username,
       })
     },
   ),
