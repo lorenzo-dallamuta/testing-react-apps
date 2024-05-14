@@ -18,7 +18,6 @@ test('submitting the form calls onSubmit with username and password', async () =
   const handleSubmit = vi.fn()
   // 🐨 render the login with your handleSubmit function as the onSubmit prop
   render(<Login onSubmit={handleSubmit} />)
-  //   render(<Login />)
   // 🐨 get the username and password fields via `getByLabelText`
   const usernameInput = screen.getByLabelText(/username/i)
   const passwordInput = screen.getByLabelText(/password/i)
