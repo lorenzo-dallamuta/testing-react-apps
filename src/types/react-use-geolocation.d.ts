@@ -3,11 +3,17 @@ declare module 'react-use-geolocation' {
     maximumAge?: number
     timeout?: number
     enableHighAccuracy?: boolean
-  }): [position: GeolocationPosition, error: GeolocationPositionError]
+  }):
+    | [position: undefined, error: undefined]
+    | [position: GeolocationPosition, error: undefined]
+    | [position: undefined, error: GeolocationPositionError]
 
   function useWatchPosition(options?: {
     maximumAge?: number
     timeout?: number
     enableHighAccuracy?: boolean
-  }): [position: GeolocationPosition, error: GeolocationPositionError]
+  }):
+    | [position: undefined, error: undefined]
+    | [position: GeolocationPosition, error: undefined]
+    | [position: undefined, error: GeolocationPositionError]
 }
