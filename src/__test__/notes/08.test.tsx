@@ -5,11 +5,7 @@ import { act, render, renderHook, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import useCounter from '@/hooks/use-counter'
 
-// 🐨 create a simple function component that uses the useCounter hook
-// and then exposes some UI that our test can interact with to test the
-// capabilities of this hook
 function CounterConsumer() {
-  // 💰 here's how to use the hook:
   const { count, increment, decrement } = useCounter()
   return (
     <div>
@@ -19,12 +15,14 @@ function CounterConsumer() {
     </div>
   )
 }
+
 // let count, increment, decrement
 // function CounterConsumer() {
 //   // 💰 here's how to use the hook:
 //   ;({count, increment, decrement} = useCounter())
 //   return null
 // }
+
 // function setup(props) {
 //   // let count, increment, decrement
 //   const result = {}
@@ -40,16 +38,12 @@ function CounterConsumer() {
 // }
 
 test('exposes the count and increment/decrement functions', async () => {
-  // 🐨 render the component
   render(<CounterConsumer />)
-  // 🐨 get the elements you need using screen
   const message = screen.getByTestId('counter-text')
   const decrement = screen.getByRole('button', { name: /decrement/i })
   const increment = screen.getByRole('button', { name: /increment/i })
-  // 🐨 assert on the initial state of the hook
   expect(message).toHaveTextContent('Current count: 0')
   // expect(count).toBe(0)
-  // 🐨 interact with the UI using userEvent and assert on the changes in the UI
   await userEvent.click(increment)
   // act(() => increment())
   expect(message).toHaveTextContent('Current count: 1')
@@ -72,7 +66,7 @@ test('allow customization of the initial count', async () => {
 
 test('allow customization of the step', async () => {
   // const {count, increment, decrement} = setup({step: 8})  // assigns the destructured value of count once
-  //const result = setup({step: 8})     // assigns to a wrapper variable around the reactive object, access with result.current.PROPERTY
+  // const result = setup({step: 8})    // assigns to a wrapper variable around the reactive object, access with result.current.PROPERTY
   // const result = setup({step: 8})    // assigns to a wrapper variable around the reactive object, access with result.PROPERTY
   // const {result} = renderHook(() => useCounter({step: 8}))
   const { result } = renderHook(useCounter, { initialProps: { step: 8 } })
